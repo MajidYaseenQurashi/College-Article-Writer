@@ -1,0 +1,87 @@
+---
+const allDevs = [
+  {
+    name: "Majid Qurashi",
+    title: "Designer",
+    desc: "I am Full stack web developer",
+    mail: "majidqurashi958@gmail.com",
+    src: "./assets/profile.jpg",
+  },
+  {
+    name: "Mubashir Farooq",
+    title: "work partner",
+    desc: "Still learning",
+    mail: "mubashirfarooq363@gmail.com",
+    src: "./assets/mubashir.jpg",
+  },
+  {
+    name: "Samin Altaf",
+    title: "Designer",
+    desc: "I am Frontend web developer",
+    mail: "saminaltaf@gmail.com",
+    src: "./assets/img_avatar.png",
+  },
+];
+---
+
+<div class="row">
+  {
+    allDevs.map((dev) => (
+      <div class="card">
+        <img class="image" src={dev.src} alt={dev.name} width="200px" />
+        <div class="container">
+          <h2>{dev.name}</h2>
+          <br />
+          <p class="title">{dev.title}</p>
+          <p class="desc">{dev.desc}</p>
+
+          <a href={`mailto: ${dev.mail}`}>
+            <button class="button">Contact</button>
+          </a>
+        </div>
+      </div>
+    ))
+  }
+</div>
+<style>
+  .row {
+    margin: 10px;
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    /* height: 60vh; */
+    align-items: center;
+  }
+  .card {
+    background-color: #ccc;
+    padding: 20px;
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 5px 5px 25px rgb(110, 110, 110);
+  }
+  .image {
+    border-radius: 50%;
+  }
+  .button {
+    color: wheat;
+    background-color: orangered;
+    border: none;
+    padding: 5px 20px;
+    cursor: pointer;
+  }
+  .desc {
+    padding: 10px 0;
+  }
+  .title {
+    font-weight: bold;
+  }
+  @media (max-width: 800px) {
+    .row {
+      flex-wrap: wrap;
+    }
+  }
+</style>

@@ -1,0 +1,61 @@
+---
+import Layout from "../components/Layout.astro";
+---
+
+<Layout>
+  <form id="contact-form" class="contact-form">
+    <h1>Contact us</h1>
+    <input type="text" placeholder="Name" required name="contact_number" />
+
+    <input type="email" placeholder="Email" required name="user_name" />
+
+    <textarea name="message" cols="20" rows="10" placeholder="Message" required
+    ></textarea>
+    <!-- <div class="send">
+    <!-- <input class="submit-btn" type="submit" value="" /> -->
+    <!-- </div> -->
+    <input type="submit" />
+  </form>
+</Layout>
+<style>
+  h1 {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: crimson;
+    text-decoration: underline;
+    margin-top: 130px;
+  }
+  .contact-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 70vh;
+    gap: 45px;
+  }
+  input,
+  textarea {
+    border-radius: 5px;
+    border: none;
+    padding: 10px 20px;
+    outline: none;
+    resize: none;
+  }
+  .submit-btn {
+    background: url("./assets/send.gif");
+    background-size: cover;
+    cursor: pointer;
+  }
+  /* .submit-btn::before {
+    content:;
+    width: 100px;
+  } */
+  @media (max-width: 800px) {
+    input {
+      padding: 5px 10px;
+    }
+    textarea {
+      padding: 20px 10px;
+    }
+  }
+</style>

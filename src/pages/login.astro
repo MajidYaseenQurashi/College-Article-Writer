@@ -1,0 +1,43 @@
+---
+import Layout from "../components/Layout.astro";
+---
+
+<Layout>
+  <form class="login">
+    <h1>Login as admin</h1>
+    <input type="text" placeholder="Username" id="uname" name="uname" />
+    <input type="password" placeholder="password" id="password" name="pass" />
+    <input class="login-btn" type="submit" value="" />
+  </form>
+</Layout>
+<style>
+  .login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 70vh;
+    gap: 45px;
+  }
+  .login-btn {
+    background: url("./assets/login.png");
+    background-size: cover;
+    cursor: pointer;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  h1 {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: crimson;
+    text-decoration: underline;
+    margin-top: 130px;
+  }
+  input {
+    border-radius: 5px;
+    border: none;
+    padding: 10px 20px;
+    outline: none;
+    resize: none;
+  }
+</style>

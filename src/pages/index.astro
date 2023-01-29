@@ -1,0 +1,143 @@
+---
+import Layout from "../components/Layout.astro";
+---
+
+<Layout>
+  <div class="subsection">
+    <div class="sub-left">
+      <p class="message">Message from Principal</p>
+      <div class="image-wrapper">
+        <img class="principal-img" src="./assets/principal.jpg" alt="" />
+        <p class="img-caption">ER IMTIYAZ AHMAD SHAW</p>
+      </div>
+      <p class="sub-message">
+        The impact of globalization and the consequent open market policy in the
+        country has been witnessed tremendous changes in industry and technology
+        during the last few years.As the environment is constantly
+        changing.Kashmir Government Polytechnic is trying to keep with these
+        developments and strives for achieving excellence in this field.Kashmir
+        Govt. Polytechnic through various innovative modes of teaching and
+        learning processes serves the state of Jammu and Kashmir in providing
+        need based,motivated and dedicated technical manpower with latest
+        technical and communication skills.The institute produces individuals
+        who can facilitate the creation of an Eco-friendly industrial base in
+        otherwise industrially backward Valley of Kashmir. The Institute
+        encourages an environment for the students to become successful
+        entrepreneurs. The institute is currently focused on restoration and
+        up-gradation of existing infrastructure which suffered a huge damage
+        during the devastating floods of September 2014.
+      </p>
+    </div>
+    <div class="sub-right">
+      <img class="college-img" src="./assets/college.jpg" alt="" />
+      <p class="ins">Instructions for Writers</p>
+      <ul class="instructions">
+        <li>
+          Author Should mention his/her name properly with email & other info.
+        </li>
+        <li>
+          Author should write meaningful content with appropriate grammer usage.
+        </li>
+        <li>
+          Spend a lot of time gathering all the information you can. You want
+          your readers to trust your information.
+        </li>
+        <li>
+          Author can refer to About page for more information regarding
+          publishment of their Articles/poems.
+        </li>
+      </ul>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .principal-img {
+    width: 100%;
+    height: 250px;
+    border-radius: 10px;
+    margin: auto;
+  }
+
+  .subsection {
+    display: flex;
+    column-gap: 25px;
+    margin: 40px;
+  }
+  .sub-left {
+    flex-basis: 60%;
+  }
+  .sub-right {
+    flex-basis: 35%;
+  }
+  .image-wrapper {
+    float: right;
+    margin-left: 15px;
+  }
+  .img-caption {
+    font-size: 16px;
+    font-weight: bold;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .college-img {
+    width: 100%;
+    height: 180px;
+    border-radius: 10px;
+  }
+  .sub-right {
+    padding: 10px;
+    background-color: #eeeeee;
+  }
+  .message {
+    display: inline-block;
+    font-size: 26px;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    margin: 40px 0;
+  }
+  .sub-message {
+    font-size: 22px;
+    text-align: justify;
+    word-break: break-all;
+    word-spacing: 5px;
+    letter-spacing: 1px;
+  }
+  .instructions {
+    display: flex;
+    flex-direction: column;
+    font-size: 17px;
+    margin: 25px 40px;
+    row-gap: 20px;
+  }
+  .ins {
+    margin-top: 15px;
+    color: royalblue;
+    font-size: 23px;
+    font-weight: bold;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    letter-spacing: 2px;
+    text-align: center;
+  }
+  .text {
+    font-size: 14px;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  }
+  @media (max-width: 800px) {
+    .image-wrapper {
+      width: 100%;
+    }
+    .instructions {
+      margin: 0;
+      list-style: none;
+      padding: 0;
+    }
+    .sub-message {
+      font-size: 18px;
+      word-break: break-all;
+      word-spacing: 5px;
+      letter-spacing: 1px;
+    }
+  }
+</style>
