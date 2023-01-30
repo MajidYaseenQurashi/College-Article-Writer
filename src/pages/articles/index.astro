@@ -1,0 +1,284 @@
+---
+import Layout from "../../components/Layout.astro";
+const allArticles = await Astro.glob("./*.md");
+console.log(allArticles);
+---
+
+<Layout title="Articles">
+  <div class="article-nav-wrapper">
+    <div class="buttons">
+      <button>All</button>
+      <button>Latest</button>
+      <button>Popular</button>
+      <button>Featured</button>
+      <button>Poems</button>
+    </div>
+    <select class="mobile-select-options">
+      <option value="all">All</option>
+      <option value="latest">Latest</option>
+      <option value="Popular">Popular</option>
+      <option value="Poems">Poems</option>
+    </select>
+    <div class="search">
+      <input
+        class="search-feild"
+        type="text"
+        placeholder="Search.."
+        name="search"
+      />
+      <span class="search-icon">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="0.89em"
+          height="1em"
+          viewBox="0 0 740 840"
+          ><path
+            fill="currentColor"
+            d="M734 668q8 9 0 17l-49 49q-3 3-8 3t-8-3L519 584q-50 38-112 55t-133 6q-53-8-99-33t-83-61t-59-85T3 366q-10-79 16-150T96 95t121-76T367 3q53 7 100 30t84 59t62 82t33 100q11 69-6 131t-55 114zM325 557q48 0 90-18t74-50t50-74t18-90t-18-90t-50-74t-74-50t-90-18t-90 18t-73 50t-50 74t-18 90t18 90t50 74t73 50t90 18z"
+          ></path>
+        </svg>
+      </span>
+    </div>
+  </div>
+  <section class="card-wrapper">
+    <div class="card">
+      <div class="card-header">
+        <img src="../assets/profile.jpg" alt="profile" width="80" height="70" />
+        <div class="title-wrapper">
+          <h2>Short title of the post</h2>
+          <div class="card-details">
+            <span>Majid Qurashi</span>
+            <span>|</span>
+            <span>10-01-2023</span>
+          </div>
+        </div>
+      </div>
+      <div class="description">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus earum
+        excepturi odio facilis assumenda voluptatem? Optio enim exercitationem
+        voluptatum mollitia debitis excepturi nemo, temporibus perspiciatis
+        sequi eveniet at tempore blanditiis atque expedita amet molestias fugit
+        quis illum aliquid eum similique vel ab. Voluptatum veritatis, eaque
+        laboriosam hic adipisci consequuntur ipsa?
+      </div>
+      <button class="read-more">Read More</button>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <img src="../assets/profile.jpg" alt="profile" width="80" height="70" />
+        <div class="title-wrapper">
+          <h2>Short title of the post</h2>
+          <div class="card-details">
+            <span>Majid Qurashi</span>
+            <span>|</span>
+            <span>10-01-2023</span>
+          </div>
+        </div>
+      </div>
+      <div class="description">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus earum
+        excepturi odio facilis assumenda voluptatem? Optio enim exercitationem
+        voluptatum mollitia debitis excepturi nemo, temporibus perspiciatis
+        sequi eveniet at tempore blanditiis atque expedita amet molestias fugit
+        quis illum aliquid eum similique vel ab. Voluptatum veritatis, eaque
+        laboriosam hic adipisci consequuntur ipsa?
+      </div>
+      <button class="read-more">Read More</button>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <img src="../assets/profile.jpg" alt="profile" width="80" height="70" />
+        <div class="title-wrapper">
+          <h2>Short title of the post</h2>
+          <div class="card-details">
+            <span>Majid Qurashi</span>
+            <span>|</span>
+            <span>10-01-2023</span>
+          </div>
+        </div>
+      </div>
+      <div class="description">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus earum
+        excepturi odio facilis assumenda voluptatem? Optio enim exercitationem
+        voluptatum mollitia debitis excepturi nemo, temporibus perspiciatis
+        sequi eveniet at tempore blanditiis atque expedita amet molestias fugit
+        quis illum aliquid eum similique vel ab. Voluptatum veritatis, eaque
+        laboriosam hic adipisci consequuntur ipsa?
+      </div>
+      <button class="read-more">Read More</button>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <img src="../assets/profile.jpg" alt="profile" width="80" height="70" />
+        <div class="title-wrapper">
+          <h2>Short title of the post</h2>
+          <div class="card-details">
+            <span>Majid Qurashi</span>
+            <span>|</span>
+            <span>10-01-2023</span>
+          </div>
+        </div>
+      </div>
+      <div class="description">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus earum
+        excepturi odio facilis assumenda voluptatem? Optio enim exercitationem
+        voluptatum mollitia debitis excepturi nemo, temporibus perspiciatis
+        sequi eveniet at tempore blanditiis atque expedita amet molestias fugit
+        quis illum aliquid eum similique vel ab. Voluptatum veritatis, eaque
+        laboriosam hic adipisci consequuntur ipsa?
+      </div>
+      <button class="read-more">Read More</button>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <img src="../assets/profile.jpg" alt="profile" width="80" height="70" />
+        <div class="title-wrapper">
+          <h2>Short title of the post</h2>
+          <div class="card-details">
+            <span>Majid Qurashi</span>
+            <span>|</span>
+            <span>10-01-2023</span>
+          </div>
+        </div>
+      </div>
+      <div class="description">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus earum
+        excepturi odio facilis assumenda voluptatem? Optio enim exercitationem
+        voluptatum mollitia debitis excepturi nemo, temporibus perspiciatis
+        sequi eveniet at tempore blanditiis atque expedita amet molestias fugit
+        quis illum aliquid eum similique vel ab. Voluptatum veritatis, eaque
+        laboriosam hic adipisci consequuntur ipsa?
+      </div>
+      <button class="read-more">Read More</button>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <img src="../assets/profile.jpg" alt="profile" width="80" height="70" />
+        <div class="title-wrapper">
+          <h2>Short title of the post</h2>
+          <div class="card-details">
+            <span>Majid Qurashi</span>
+            <span>|</span>
+            <span>10-01-2023</span>
+          </div>
+        </div>
+      </div>
+      <div class="description">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus earum
+        excepturi odio facilis assumenda voluptatem? Optio enim exercitationem
+        voluptatum mollitia debitis excepturi nemo, temporibus perspiciatis
+        sequi eveniet at tempore blanditiis atque expedita amet molestias fugit
+        quis illum aliquid eum similique vel ab. Voluptatum veritatis, eaque
+        laboriosam hic adipisci consequuntur ipsa?
+      </div>
+      <button class="read-more">Read More</button>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <img src="../assets/profile.jpg" alt="profile" width="80" height="70" />
+        <div class="title-wrapper">
+          <h2>Short title of the post</h2>
+          <div class="card-details">
+            <span>Majid Qurashi</span>
+            <span>|</span>
+            <span>10-01-2023</span>
+          </div>
+        </div>
+      </div>
+      <div class="description">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus earum
+        excepturi odio facilis assumenda voluptatem? Optio enim exercitationem
+        voluptatum mollitia debitis excepturi nemo, temporibus perspiciatis
+        sequi eveniet at tempore blanditiis atque expedita amet molestias fugit
+        quis illum aliquid eum similique vel ab. Voluptatum veritatis, eaque
+        laboriosam hic adipisci consequuntur ipsa?
+      </div>
+      <button class="read-more">Read More</button>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  button {
+    margin-right: 35px;
+    /* margin-left: 55px; */
+
+    height: 23px;
+    border-radius: 3px;
+    border: solid 1px;
+    /* width: 100px; */
+    background-color: green;
+    color: wheat;
+    cursor: pointer;
+  }
+  .article-nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    max-width: 90vw;
+  }
+  .search {
+    float: right;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .search-feild {
+    height: 23px;
+    border-radius: 3px;
+    border: solid 1px;
+  }
+  .mobile-select-options {
+    display: none;
+    border: none;
+  }
+  .card-wrapper {
+    width: 90vw;
+    margin: auto;
+    margin-top: 30px;
+    display: flex;
+    gap: 5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .card {
+    border: 2px solid black;
+    width: 380px;
+    height: 310px;
+    padding: 10px;
+  }
+  .card-header {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+  }
+  .card-header h2 {
+    margin: 7px 0;
+  }
+  .description {
+    text-align: justify;
+    margin: 18px;
+  }
+  .read-more {
+    float: right;
+  }
+  .card-details {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media (max-width: 800px) {
+    .buttons {
+      display: none;
+    }
+    .search {
+      margin: 0 10vw 0 0;
+      display: none;
+    }
+    .mobile-select-options {
+      /* margin: 0 0 0 10vw; */
+      margin: auto;
+      display: block;
+    }
+  }
+</style>
