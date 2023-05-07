@@ -1,7 +1,7 @@
 ---
 import Layout from "../../components/Layout.astro";
 const allArticles = await Astro.glob("./*.md");
-console.log(allArticles);
+// console.log(allArticles[0].url)
 ---
 
 <Layout title="Articles">
@@ -41,138 +41,32 @@ console.log(allArticles);
     </div>
   </div>
   <section class="card-wrapper">
-    <div class="card">
-      <div class="card-header">
-        <img src="../assets/profile.jpg" alt="profile" width="80" height="70" />
-        <div class="title-wrapper">
-          <h3>My View about Computer Egineering</h3>
-          <div class="card-details">
-            <span>Majid Qurashi</span>
-            <span>|</span>
-            <span>10-01-2023</span>
+    {
+      allArticles.map((singleArticle) => (
+        <div class="card">
+          <div class="card-header">
+            <img
+              src={`../post-images/${singleArticle.frontmatter.image}`}
+              alt="profile"
+              width="80"
+              height="70"
+            />
+            <div class="title-wrapper">
+              <h3>{singleArticle.frontmatter.title}</h3>
+              <div class="card-details">
+                <span>{singleArticle.frontmatter.author}</span>
+                <span>|</span>
+                <span>{singleArticle.frontmatter.date}</span>
+              </div>
+            </div>
           </div>
+          <div class="description">{singleArticle.frontmatter.description}</div>
+          <button class="read-more">
+            <a href={singleArticle.url}>Read More</a>
+          </button>
         </div>
-      </div>
-      <div class="description">
-        Computer Engineering is very precise and decently hard career to pursue.
-        Computer Engineering is feild of study that intertwines computer science
-        and electrical Engineering to create and develop computer hardware and
-        software. Computer Engineers have many responsibilities.They work in
-        virtually all industries they make and build software Which can be
-        accessed by people across
-      </div>
-      <button class="read-more">Read More</button>
-    </div>
-    <div class="card">
-      <div class="card-header">
-        <img src="../assets/profile.jpg" alt="profile" width="80" height="70" />
-        <div class="title-wrapper">
-          <h3>My View about Computer Egineering</h3>
-          <div class="card-details">
-            <span>Majid Qurashi</span>
-            <span>|</span>
-            <span>10-01-2023</span>
-          </div>
-        </div>
-      </div>
-      <div class="description">
-        Computer Engineering is very precise and decently hard career to pursue.
-        Computer Engineering is feild of study that intertwines computer science
-        and electrical Engineering to create and develop computer hardware and
-        software. Computer Engineers have many responsibilities.They work in
-        virtually all industries they make and build software Which can be
-        accessed by people across
-      </div>
-      <button class="read-more">Read More</button>
-    </div>
-    <div class="card">
-      <div class="card-header">
-        <img src="../assets/profile.jpg" alt="profile" width="80" height="70" />
-        <div class="title-wrapper">
-          <h3>My View about Computer Egineering</h3>
-          <div class="card-details">
-            <span>Majid Qurashi</span>
-            <span>|</span>
-            <span>10-01-2023</span>
-          </div>
-        </div>
-      </div>
-      <div class="description">
-        Computer Engineering is very precise and decently hard career to pursue.
-        Computer Engineering is feild of study that intertwines computer science
-        and electrical Engineering to create and develop computer hardware and
-        software. Computer Engineers have many responsibilities.They work in
-        virtually all industries they make and build software Which can be
-        accessed by people across
-      </div>
-      <button class="read-more">Read More</button>
-    </div>
-    <div class="card">
-      <div class="card-header">
-        <img src="../assets/profile.jpg" alt="profile" width="80" height="70" />
-        <div class="title-wrapper">
-          <h3>My View about Computer Egineering</h3>
-          <div class="card-details">
-            <span>Majid Qurashi</span>
-            <span>|</span>
-            <span>10-01-2023</span>
-          </div>
-        </div>
-      </div>
-      <div class="description">
-        Computer Engineering is very precise and decently hard career to pursue.
-        Computer Engineering is feild of study that intertwines computer science
-        and electrical Engineering to create and develop computer hardware and
-        software. Computer Engineers have many responsibilities.They work in
-        virtually all industries they make and build software Which can be
-        accessed by people across
-      </div>
-      <button class="read-more">Read More</button>
-    </div>
-    <div class="card">
-      <div class="card-header">
-        <img src="../assets/profile.jpg" alt="profile" width="80" height="70" />
-        <div class="title-wrapper">
-          <h3>My View about Computer Egineering</h3>
-          <div class="card-details">
-            <span>Majid Qurashi</span>
-            <span>|</span>
-            <span>10-01-2023</span>
-          </div>
-        </div>
-      </div>
-      <div class="description">
-        Computer Engineering is very precise and decently hard career to pursue.
-        Computer Engineering is feild of study that intertwines computer science
-        and electrical Engineering to create and develop computer hardware and
-        software. Computer Engineers have many responsibilities.They work in
-        virtually all industries they make and build software Which can be
-        accessed by people across
-      </div>
-      <button class="read-more">Read More</button>
-    </div>
-    <div class="card">
-      <div class="card-header">
-        <img src="../assets/profile.jpg" alt="profile" width="80" height="70" />
-        <div class="title-wrapper">
-          <h3>My View about Computer Egineering</h3>
-          <div class="card-details">
-            <span>Majid Qurashi</span>
-            <span>|</span>
-            <span>10-01-2023</span>
-          </div>
-        </div>
-      </div>
-      <div class="description">
-        Computer Engineering is very precise and decently hard career to pursue.
-        Computer Engineering is feild of study that intertwines computer science
-        and electrical Engineering to create and develop computer hardware and
-        software. Computer Engineers have many responsibilities.They work in
-        virtually all industries they make and build software Which can be
-        accessed by people across
-      </div>
-      <button class="read-more">Read More</button>
-    </div>
+      ))
+    }
   </section>
 </Layout>
 
@@ -223,8 +117,8 @@ console.log(allArticles);
     border: 2px solid black;
     border-radius: 10px;
     box-shadow: 15px 15px 45px rgb(110, 110, 110);
-    width: 380px;
-    height: 420px;
+    width: 420px;
+    height: 435px;
     padding: 10px;
   }
   .card-header {
@@ -249,7 +143,10 @@ console.log(allArticles);
     gap: 0.5rem;
   }
   img {
-    border-radius: 50%;
+    /* border-radius: 50%; */
+  }
+  a {
+    color: wheat;
   }
 
   @media (max-width: 800px) {
@@ -270,3 +167,4 @@ console.log(allArticles);
     }
   }
 </style>
+

@@ -5,16 +5,30 @@ import Layout from "../components/Layout.astro";
 <Layout>
   <form id="contact-form" class="contact-form">
     <h1>Contact us</h1>
-    <input type="text" placeholder="Name" required name="contact_number" />
+    <input
+      type="text"
+      id="fullName"
+      placeholder="Name"
+      required
+      name="contact_number"
+    />
 
-    <input type="email" placeholder="Email" required name="user_name" />
+    <input
+      type="email"
+      placeholder="Email"
+      required
+      name="user_name"
+      id="email_id"
+    />
 
-    <textarea name="message" cols="20" rows="10" placeholder="Message" required
-    ></textarea>
-    <!-- <div class="send">
-    <!-- <input class="submit-btn" type="submit" value="" /> -->
-    <!-- </div> -->
-    <input type="submit" />
+    <textarea
+      name="message"
+      cols="20"
+      rows="10"
+      placeholder="Message"
+      required
+      id="message"></textarea>
+    <input type="submit" onClick="sendMail()" />
   </form>
 </Layout>
 <style>
