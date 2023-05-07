@@ -1,5 +1,4 @@
 ---
-
 title: A Comprehensive Overview of the Department
 author: Majid Qurashi
 date: 03-03-2023
@@ -65,6 +64,13 @@ description: Kashmir Government Polytechnic College is one of the premier educat
     word-break: break-all;
     word-spacing: 5px;
   }
+  button{
+    background-color: orangered;
+    color:white;
+    border:none;
+    padding: 5px;
+    border-radius: 5px;
+  }
 </style>
 </head>
 <body>
@@ -90,9 +96,9 @@ Database Management Systems, Networking, Programming Languages,
 Web Technologies, Software Engineering and more. The department also
 provides students with hands-on experience through laboratory sessions
 and projects.
-</p> 
+</p>
 
- <img src="../assets/cse.jpg" class="college">
+ <img src="../assets/college.jpg" class="college">
  <p class="article">The faculty members at the Department of Computer Engineering are
 highly qualified and experienced professionals who are dedicated to
 providing quality education to their students. They use modern teaching
@@ -122,9 +128,9 @@ I remained in this department as a student for the period of 3 years. I
 found beloved teachers here which include Shabir sir, Neelam ma'am, Aijaz
 Sir, Asima ma'am, shazia ma'am, mustaq sir, nowsheen ma'am, sahiba ma'am
 and all those who teached me during intial years.</p>
+<button>Thank You</button>
  </div>
             </div>
           </div>
           </div>
             </section>
- 
